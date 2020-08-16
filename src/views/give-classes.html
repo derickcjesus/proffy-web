@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/styles/partials/header.css">
     <link rel="stylesheet" href="/styles/partials/forms.css">
     <link rel="stylesheet" href="/styles/partials/page-give-classes.css">
-
+    <link rel="stylesheet" href="/styles/partials/modal.css">
 
 
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
@@ -89,10 +89,10 @@
                            <label for="weekday">Dia da semana</label>
                            <select name="weekday[]">
                                {% for weekday  in weekdays %}
-                                <option value="{{loop.index}}">
-                                    {{weekday}}
-                                </option>
-                            {% endfor %}
+                                    <option value="{{loop.index}}">
+                                        {{weekday}}
+                                    </option>
+                                {% endfor %}
                            </select>
                        </div>
 
@@ -115,11 +115,24 @@
                    Importante! <br> Preencha todos os dados
                </p>
 
-               <button type="submit" form="create-classes">Salvar cadastro</button>
+               <button class="button" type="submit" form="create-classes">Salvar cadastro</button>
            </footer>
         </main>
     </div>
+
+    {# {% extends "modal.html" %} 
+
+
+     {% block modal %}
+        {% include "views/modal.html" %}
+    {% endblock modal %}   #}
+    <div id="modal" class="hide">
+        <div class="content">
+            <img src="images/logo.svg" alt="proffy">
+            <h1> CADASTRADO COM SUCESSO! </h1>
+        </div>
+    </div>
     
     <script src="/scripts/addField.js"></script>
-</body>
+    <script src="/scripts/modal.js"></script> 
 </html>

@@ -1,0 +1,33 @@
+#modal {
+    background-color: #8257e5;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 2s;
+}
+
+#modal.hide {
+    display: none;
+}  
+
+#modal .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+
+#modal .content img {
+    height: 3.6rem;
+}
+
+#modal .content h1 {
+    font-size: 2.2rem;
+    color: var(--color-line-in-white);
+    margin-top: 1.4rem;
+    text-shadow: 4px 5px 4px var(--color-text-title);
+} 
